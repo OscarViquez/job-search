@@ -6,7 +6,7 @@ posting as you go. It takes about 15 minutes.
 
 ## Before you start
 
-- Install [Claude Code](https://code.claude.com/docs).
+- Install [Claude Code](https://claude.com/product/claude-code).
 - Clone this repo, open the folder in a terminal, and run `claude`.
 - Find one job posting you want to apply to. A link is enough.
 

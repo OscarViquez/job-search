@@ -39,7 +39,7 @@ unclear, Claude asks you with a short list to pick from.
 
 ## Quick start
 
-1. Install [Claude Code](https://code.claude.com/docs) and clone this repo.
+1. Install [Claude Code](https://claude.com/product/claude-code) and clone this repo.
 2. Open the repo folder in a terminal and run `claude`.
 3. Pick one:
    - **You have a resume:** save it as Markdown at
