@@ -39,27 +39,34 @@ has to guess. There's a template at
 
 Every review and tailored resume is judged against a real job description,
 so add the posting before anything else. Without one, you only get a
-general screen. Pick whichever way is easiest:
+general screen.
 
-- **Paste the text (most reliable).** Copy the whole posting, including
-  the requirements and "nice to have" sections, and paste it after the
-  command:
+**Recommended: save it as a file.** Copy the whole posting, including the
+requirements and "nice to have" sections, into a new file named after the
+company and role:
 
-  ```text
-  /review-resume jane
-  <paste the full job description here>
-  ```
+```text
+candidates/jane-doe/job/frontend/acme-frontend-engineer.md
+```
+
+The middle folder groups similar roles (`frontend`, `ai`, `healthcare`,
+...), so name it whatever makes sense to you. Then refer to the posting by a
+short name: `/review-resume jane acme`. This keeps the long posting out of
+your chat, which saves tokens and leaves more room in the conversation for
+the actual work. The recruiter agents read the file on their own.
+
+Other ways, if they're easier:
 
 - **Give the link.** `/review-resume jane https://example.com/jobs/acme-frontend-engineer`.
-  Many job sites (LinkedIn, Workday, and most applicant tracking systems)
-  need a login or block automated reading. If the link doesn't load,
-  Claude asks you to paste the text instead.
-- **Save the file yourself.** Paste the posting into
-  `candidates/jane-doe/job/<role-family>/acme-frontend-engineer.md`, for
-  example `job/frontend/acme-frontend-engineer.md`.
+  Claude saves the page to your `job/` folder for you. Many job sites
+  (LinkedIn, Workday, and most applicant tracking systems) need a login or
+  block automated reading. If the link doesn't load, save the file yourself.
+- **Paste it into the chat.** This works, but the whole posting then stays
+  in the conversation for the rest of the session. Use it for short
+  postings, or start a fresh session afterward.
 
-Either way, the posting is saved word for word in your `job/` folder. From
-then on, a short name is enough: `/review-resume jane acme`.
+Either way, the posting ends up saved word for word in your `job/` folder,
+and from then on a short name is enough.
 
 ## Step 3: Review your resume against the job
 
@@ -172,7 +179,7 @@ copy.
 | - | - |
 | `/review-resume` doesn't appear | Run `claude` from the repo root, where `.claude/` lives. |
 | "Which candidate?" every time | Type part of your folder name first: `/review-resume jane ...` |
-| The posting link won't load | Paste the posting text into the chat instead. Claude saves it the same way. |
+| The posting link won't load | Save the posting text as a file in your `job/` folder, then refer to it by name. |
 | A suggestion claims something you didn't do | Say so. It's listed under "Confirm with the candidate" for exactly this reason. |
 
 Next: [the workflow for every job you apply to](workflow.md).

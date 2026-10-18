@@ -39,10 +39,11 @@ Each update creates a new version, so you can always go back.
 
 ## 2. For each job you apply to
 
-1. **Add the posting first.** Paste the full job description (or its link)
-   after any command. It's saved under `job/` and gets a Job Checklist, and
-   every later step is judged against it. Pasting is more reliable than a
-   link, since many job sites block automated reading.
+1. **Add the posting first.** Save the full job description as a file in
+   `job/<role-family>/<company>-<role>.md` and refer to it by a short name.
+   A link works too. Every later step is judged against it, and it gets a
+   Job Checklist. A file keeps the long posting out of your chat, which
+   saves tokens.
 2. **Tailor it.** `/create-resume <you> <posting>`. You approve the fit plan,
    then pick each bullet.
 3. **Check it.** `/review-resume <you> <posting> <tailored file>`.

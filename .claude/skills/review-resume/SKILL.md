@@ -30,14 +30,15 @@ Arguments can come in any order. Match each token against the repo:
   URL: fetch it and save the posting text verbatim to
   `candidates/<slug>/job/<role-family>/<company>-<role>.md` first. Pasted
   posting text: save it the same way. If a URL needs a login, gets blocked, or comes back without the
-  requirements, don't work from a partial page. Ask the user to paste the
-  full job description. If nothing matches, or a word matches
+  requirements, don't work from a partial page. Ask the user to save the
+  full job description as a file in `job/` and give its name (pasting into
+  the chat also works, but uses more context). If nothing matches, or a word matches
   several files, ask, listing the matches as options. Never guess, and never
   cover several postings in one report.
 - No posting at all: list the candidate's saved postings and ask which to
-  use, with "Paste a new job description" and "General screen, no posting"
-  as the last options. If they have no saved postings, ask them to paste
-  one first.
+  use, with "Add a new job description" and "General screen, no posting"
+  as the last options. If they have no saved postings, ask them to save
+  one as a file in `job/` first.
 
 Before spawning anything, tell the user in one line what will be reviewed:
 "Reviewing resume-v2 for jane-doe against Acme Frontend Engineer with 3 recruiters."
