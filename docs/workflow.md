@@ -3,18 +3,27 @@
 The expected loop, once you're set up. Work on your base resume first,
 then make one tailored copy per job.
 
-```text
-             ┌──────────────── once ────────────────┐
-             │                                      │
-  add yourself ──► /review-resume ──► /update-resume ┘
-                         ▲                 │
-                         └── until it passes
+```mermaid
+flowchart LR
+    subgraph base["1 · Base resume (once)"]
+        direction TB
+        A([Add yourself]) --> B["/review-resume"]
+        B --> C{Would it survive<br/>the screen?}
+        C -- No --> D["/update-resume<br/>saves the next version"]
+        D --> B
+    end
 
-             ┌────────────── per job ───────────────┐
-             │                                      │
-  new posting ──► /create-resume ──► /review-resume ─┘
-                                          │
-                                       apply
+    subgraph job["2 · Each job you apply to"]
+        direction TB
+        E([New job posting]) --> F["/create-resume<br/>tailored copy"]
+        F --> G["/review-resume<br/>on the tailored copy"]
+        G --> H{Would it survive<br/>the screen?}
+        H -- No --> I["/update-resume<br/>on the tailored copy"]
+        I --> G
+        H -- Yes --> J([Apply])
+    end
+
+    base -- "Yes: base is ready" --> job
 ```
 
 ## 1. Build a strong base resume (once)
@@ -30,8 +39,10 @@ Each update creates a new version, so you can always go back.
 
 ## 2. For each job you apply to
 
-1. **Add the posting.** Pass the link or the pasted text to any command.
-   It's saved under `job/` and gets a Job Checklist.
+1. **Add the posting first.** Paste the full job description (or its link)
+   after any command. It's saved under `job/` and gets a Job Checklist, and
+   every later step is judged against it. Pasting is more reliable than a
+   link, since many job sites block automated reading.
 2. **Tailor it.** `/create-resume <you> <posting>`. You approve the fit plan,
    then pick each bullet.
 3. **Check it.** `/review-resume <you> <posting> <tailored file>`.

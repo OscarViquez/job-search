@@ -41,13 +41,16 @@ unclear, Claude asks you with a short list to pick from.
 
 1. Install [Claude Code](https://claude.com/product/claude-code) and clone this repo.
 2. Open the repo folder in a terminal and run `claude`.
-3. Pick one:
+3. Copy the full job description you're applying to. Every review is
+   judged against it. A link works too, but many job sites block automated
+   reading, so pasting the text is the most reliable option.
+4. Pick one:
    - **You have a resume:** save it as Markdown at
      `candidates/<your-name>/resume/resume-v1.md` (e.g. `jane-doe`), then run
-     `/review-resume <your-name> <job posting URL>`.
-   - **Starting from scratch:** run
-     `/create-resume <your-name> <job posting URL>`. It sets up your folder
-     and asks about your experience.
+     `/review-resume <your-name>` and paste the job description after it.
+   - **Starting from scratch:** run `/create-resume <your-name>` and paste
+     the job description after it. It sets up your folder and asks about
+     your experience.
 
 New to this? The [tutorial](docs/getting-started.md) walks through a full
 first run in about 15 minutes.

@@ -37,7 +37,11 @@ Arguments come in any order.
 - **Posting:** a path, a word matched against `candidates/<slug>/job/**`, a
   URL, or pasted text. Save URLs and pasted text verbatim to
   `job/<role-family>/<company>-<role>.md` first. Ask if nothing matches, or
-  if several files match. One resume targets one posting.
+  if several files match. One resume targets one posting. If a URL needs a login, gets blocked, or comes back without the
+  requirements, don't work from a partial page. Ask the user to paste the
+  full job description.
+  No posting given: ask for one before anything else, since the whole
+  resume is built around it.
 - **Source:**
   - `from: resume` uses the latest `resume/resume-vN.md`.
   - `from: history` uses everything in `history/`, plus the latest

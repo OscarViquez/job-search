@@ -16,8 +16,12 @@ candidates/<your-name>/
 
 To add yourself, either save your resume as
 `candidates/<your-name>/resume/resume-v1.md`, or run
-`/create-resume <your-name> <job posting URL>` and it sets up the folder for
-you.
+`/create-resume <your-name>` and paste the job description after it. It
+sets up the folder for you.
+
+Add the job description before reviewing or tailoring, since every result
+is judged against it. Pasting the full text works best, because many job
+sites block automated reading of links.
 
 - [Getting started](../docs/getting-started.md): a step-by-step first run
 - [Workflow](../docs/workflow.md): the loop for every job you apply to

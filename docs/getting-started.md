@@ -8,7 +8,8 @@ posting as you go. It takes about 15 minutes.
 
 - Install [Claude Code](https://claude.com/product/claude-code).
 - Clone this repo, open the folder in a terminal, and run `claude`.
-- Find one job posting you want to apply to. A link is enough.
+- Find one job posting you want to apply to, and keep its full text handy.
+  A link alone often won't load (see [Step 2](#step-2-add-the-job-posting)).
 
 ## Step 1: Add yourself
 
@@ -25,7 +26,7 @@ The exact formatting doesn't matter. Claude only needs the text: contact
 line, education, and each job with its bullets.
 
 **If you don't have one,** or it's out of date, skip to
-[Step 5](#step-5-build-a-resume-for-the-job). `/create-resume` sets up your
+[Step 6](#step-6-build-a-resume-for-the-job). `/create-resume` sets up your
 folder and builds one with you.
 
 **Optional, but worth it:** create `candidates/jane-doe/history/work-history.md`
@@ -34,23 +35,47 @@ fine. The more Claude knows, the fewer questions it asks, and the less it
 has to guess. There's a template at
 `.claude/skills/create-resume/assets/work-history-template.md`.
 
-## Step 2: Review your resume against the job
+## Step 2: Add the job posting
+
+Every review and tailored resume is judged against a real job description,
+so add the posting before anything else. Without one, you only get a
+general screen. Pick whichever way is easiest:
+
+- **Paste the text (most reliable).** Copy the whole posting, including
+  the requirements and "nice to have" sections, and paste it after the
+  command:
+
+  ```text
+  /review-resume jane
+  <paste the full job description here>
+  ```
+
+- **Give the link.** `/review-resume jane https://example.com/jobs/acme-frontend-engineer`.
+  Many job sites (LinkedIn, Workday, and most applicant tracking systems)
+  need a login or block automated reading. If the link doesn't load,
+  Claude asks you to paste the text instead.
+- **Save the file yourself.** Paste the posting into
+  `candidates/jane-doe/job/<role-family>/acme-frontend-engineer.md`, for
+  example `job/frontend/acme-frontend-engineer.md`.
+
+Either way, the posting is saved word for word in your `job/` folder. From
+then on, a short name is enough: `/review-resume jane acme`.
+
+## Step 3: Review your resume against the job
 
 ```text
-/review-resume jane https://example.com/jobs/acme-frontend-engineer
+/review-resume jane acme
 ```
 
 What happens:
 
-1. Claude saves the posting to
-   `candidates/jane-doe/job/<role-family>/acme-frontend-engineer.md`.
-2. It builds a **Job Checklist**: the 8-12 things an ideal candidate for
+1. It builds a **Job Checklist**: the 8-12 things an ideal candidate for
    this job has. The checklist is saved in `job-checklist/` and reused next
    time.
-3. It tells you the plan in one line, then starts 3 recruiter agents at once.
+2. It tells you the plan in one line, then starts 3 recruiter agents at once.
    Each one looks at your resume from a different angle: the first 20-second
    pass, the quality of each bullet, and whether every claim holds up.
-4. It merges their findings into one short report:
+3. It merges their findings into one short report:
 
 ```markdown
 # Resume Screen: Jane Doe — Acme Frontend Engineer
@@ -71,7 +96,7 @@ Reviewed by: 3 recruiters (first pass, bullets, credibility)
 The report is saved in `candidates/jane-doe/feedback/` with today's date, so
 you can compare reports over time.
 
-## Step 3: Fix it
+## Step 4: Fix it
 
 ```text
 /update-resume jane
@@ -100,16 +125,16 @@ Confirm with the candidate: "without errors" was inferred. Is that true?
 4. When you're done, Claude saves `resume-v2.md`. `resume-v1.md` is left
    untouched.
 
-## Step 4: Review again
+## Step 5: Review again
 
 ```text
 /review-resume jane acme v2
 ```
 
 This time "acme" is enough, because the posting is already saved. Repeat
-steps 3 and 4 until the verdict says the resume would survive.
+steps 4 and 5 until the verdict says the resume would survive.
 
-## Step 5: Build a resume for the job
+## Step 6: Build a resume for the job
 
 Once your base resume is solid, make a copy aimed at this one job:
 
@@ -123,7 +148,7 @@ Once your base resume is solid, make a copy aimed at this one job:
    not, the gap stays a gap.
 2. **Drafting:** one recruiter agent per job or project drafts bullet
    options, all at the same time.
-3. **Picking:** you choose bullets one entry at a time, as in step 3.
+3. **Picking:** you choose bullets one entry at a time, as in step 4.
 4. **Saved:** `candidates/jane-doe/resume/curated-resumes/resume-v2-acme-frontend-engineer.md`.
 
 Finish with `/review-resume jane acme <that file>` to check the tailored
