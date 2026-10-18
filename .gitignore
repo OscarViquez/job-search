@@ -1,0 +1,10 @@
+# Personal candidate data: resumes, contact details, job postings, feedback.
+# Only the README in candidates/ is published.
+candidates/*
+!candidates/README.md
+
+# Local Claude Code settings (personal permissions)
+.claude/settings.local.json
+
+# OS files
+.DS_Store
