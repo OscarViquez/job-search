@@ -3,6 +3,9 @@
 candidates/*
 !candidates/README.md
 
+# Job Checklists for real postings show where candidates applied
+job-checklist/
+
 # Local Claude Code settings (personal permissions)
 .claude/settings.local.json
 
