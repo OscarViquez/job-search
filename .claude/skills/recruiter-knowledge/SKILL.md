@@ -2,7 +2,7 @@
 name: recruiter-knowledge
 description: Screens and critiques a resume the way an experienced technical recruiter does under real time pressure — the 20-second scan, the qualification formula (keywords + how + why), naming exact foundational tech instead of adjacent tools, a metrics linter, a basic-and-boring tone check, and timing/relocation framing. Use when asked to review, critique, screen, grade, or improve a resume or resume bullet, or whether a resume would survive recruiter screening for a given role.
 metadata:
-  version: "1.3"
+  version: "1.4"
 ---
 
 # Recruiter Knowledge
@@ -86,6 +86,18 @@ Gotchas that look like a "why" but aren't:
 - **Kept bullets.** Apply the layman test to every bullet, including ones
   carried over unchanged from an earlier version. Insider terms like
   "on-premises Apigee endpoint" or "SOP" survive that way.
+- **Guarantee endings.** "Keep its output reliable" promises a result. Say
+  what the work does or tracks instead ("track quality drops and improved
+  outputs"). Be extra wary when the guarantee echoes a posting phrase.
+- **Replaced work.** A bullet about something another bullet says was
+  replaced (an old library next to "replaced Delta's Angular setup") reads
+  as deprecated work. Suggest cutting it unless it carries a signal found
+  nowhere else on the page.
+- **Overloaded bullets.** A bullet listing three audiences, four tasks, or a
+  posting keyword added only to match ("rolled out through canary
+  deployments and feature flags") is hard to read in a 20-second pass. Keep
+  one piece of work and one outcome, and group the people ("engineers
+  across teams").
 
 This also rules out bragging: a resume communicates utility, not ego.
 Awards, superlatives, and flashy self-praise don't substitute for a clear
@@ -141,6 +153,11 @@ feedback, or conflict-prone — not as a sign of competence. Resumes should
 read as basic, clean, and boring: this establishes baseline competence and
 teamwork, which is what's actually being screened for at this stage. Flag
 bullets that are over-engineered relative to what they describe.
+
+Watch verb weight and qualifiers too. "Architected" on a prototype, or on
+most of the bullets, reads as inflated. Words like "daily", "every" or
+"all" invite an interviewer to test them. Flag both, and suggest the plainer
+verb ("Designed", "Built") or drop the qualifier.
 
 ### 7. Timing & logistics check
 

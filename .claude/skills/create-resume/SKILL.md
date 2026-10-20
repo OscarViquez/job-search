@@ -15,6 +15,25 @@ Build a new resume for one job posting, with the candidate's approval at
 every step. Recruiter agents draft the options. The candidate picks them.
 Nothing is written to the resume file until the candidate has approved it.
 
+## Asking the candidate
+
+Ask every question with the AskUserQuestion tool, never as a list in chat
+for the candidate to answer by typing.
+
+- Up to 4 questions per call. For more, send several calls in a row (7
+  bullets means two calls).
+- A pick (bullet options, a posting, a plan): 2 to 4 options. Give the
+  label a short name ("B, 28 words") and put the full text, word for word,
+  in the description. List the recommended option first and add
+  "(Recommended)" to its label.
+- A fact in the candidate's own words: still ask with the tool. Offer the
+  likely answers as options, and the candidate types anything else under
+  "Other".
+- Use multiSelect when several answers can be true ("Which agents are in
+  daily use?").
+- Keep the question text short, with only the context needed to answer.
+  Show long material (a fit plan, a report) in chat first, then ask.
+
 ## Progress
 
 - [ ] 1. Resolve the candidate, posting and source
@@ -82,6 +101,7 @@ Brief for each:
 Rewrite mode. Candidate: <slug>. Posting: <path>. Job Checklist: <path>.
 Entry: <title at company, dates>. Other entries on this resume: <one line each, so you can spread keywords>.
 Source material for this entry (the only facts you may use): <quoted text from the source files, with paths>.
+Candidate's approved wording for this work (base resume and other tailored copies): <quoted bullets, with paths, or "none">. Offer it as one option per bullet.
 Checklist items this entry should cover: <items>.
 Candidate context and past corrections: <everything the candidate said in steps 1-3>.
 Write 3 to 5 bullets for this entry. For each bullet, give 2-3 options,
@@ -95,9 +115,15 @@ a pick, and a "Confirm with the candidate" line. Don't write any files.
 - Before showing anything, check every option against the
   [format rules](#format-rules) and the candidate's corrections. Fix
   breaches or drop the option.
-- Present one entry at a time: the options side by side, the recommended
-  pick with a one-line reason, and the claims the candidate needs to
-  confirm.
+- When the candidate has approved wording for a bullet in another tailored
+  copy, include it as an option even if the recruiter left it out. The
+  candidate usually picks it, or edits it, over fresh drafts.
+- Present one entry at a time with AskUserQuestion (see
+  [Asking the candidate](#asking-the-candidate)): one question per bullet,
+  each option holding the full bullet and its word count, and the
+  recommended pick first with a one-line reason in its description. Offer
+  "Cut this bullet" as an option when cutting is a real choice. Then ask the
+  claims the candidate needs to confirm as their own questions.
 - If the candidate corrects a fact, re-check every remaining option against
   that correction. Re-spawn a recruiter for that entry if needed, passing
   the correction along.
@@ -117,6 +143,11 @@ from the base resume, or ask for it if there's no base. Then report the
 path. Offer `/review-resume <candidate> <posting> <new file path>` as the
 next step.
 
+If the candidate later shares their own final edits to the bullets,
+re-read the file, apply the edits word for word, and compare them with the
+picked options. Any new pattern (a cut qualifier, a softer verb, a
+grouped list) is a correction for the recruiter agent's rules.
+
 ## Format rules
 
 Follow [the resume template](assets/resume-template.md). Where it differs
@@ -124,7 +155,8 @@ from these rules (dates, bullet minimum), the rules win:
 
 - No headline, title line, or summary/objective section.
 - No bold "Keyword:" labels at the start of bullets. Start each bullet with
-  a plain verb.
+  a plain action verb, never a lead-in phrase ("As a founding engineer on
+  X, architected..."). Don't tell recruiters a lead-in is allowed.
 - Each bullet is keyword + how + why, and the why is the outcome. Aim for
   about 20-30 words.
 - Never use "so" or semicolons in a bullet.

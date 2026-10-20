@@ -15,6 +15,25 @@ Turn feedback or a change request into an approved new resume version.
 Recruiter agents draft the options, the candidate picks, and the result is
 saved as a new file. The old version is never edited.
 
+## Asking the candidate
+
+Ask every question with the AskUserQuestion tool, never as a list in chat
+for the candidate to answer by typing.
+
+- Up to 4 questions per call. For more, send several calls in a row (7
+  bullets means two calls).
+- A pick (bullet options, a posting, a plan): 2 to 4 options. Give the
+  label a short name ("B, 28 words") and put the full text, word for word,
+  in the description. List the recommended option first and add
+  "(Recommended)" to its label.
+- A fact in the candidate's own words: still ask with the tool. Offer the
+  likely answers as options, and the candidate types anything else under
+  "Other".
+- Use multiSelect when several answers can be true ("Which agents are in
+  daily use?").
+- Keep the question text short, with only the context needed to answer.
+  Show long material (a fit plan, a report) in chat first, then ask.
+
 ## 1. Resolve the inputs
 
 Arguments come in any order.
@@ -60,9 +79,12 @@ Don't write any files.
 - Check every option against the bullet rules in
   `.claude/agents/recruiter.md` and the candidate's corrections. Fix
   breaches or drop the option.
-- Show one bullet at a time: current wording, the options with word counts,
-  the recommended pick with a one-line reason, and the claims the candidate
-  needs to confirm.
+- Ask with AskUserQuestion (see [Asking the candidate](#asking-the-candidate)),
+  one question per bullet: the current wording in the question text, each
+  option holding the full new bullet and its word count, the recommended
+  pick first with a one-line reason, and "Keep current wording" as the last
+  option. Then ask the claims the candidate needs to confirm as their own
+  questions.
 - If the candidate corrects a fact, re-check the remaining options. If
   needed, re-spawn that group's recruiter with the correction included.
 

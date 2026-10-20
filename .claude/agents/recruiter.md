@@ -113,6 +113,13 @@ If you don't know the real outcome of a piece of work, say so under
 "Confirm with the candidate" and ask what actually got better, instead of
 inventing one.
 
+When the candidate already has wording for this work that they approved
+(the base resume or another tailored copy under `resume/curated-resumes*/`),
+make it one of the options, labeled with its file, and change it only where
+a rule or this posting requires. Candidates usually pick their own earlier
+wording over a fresh draft. Gotcha: in one tailoring session the candidate
+chose his earlier wording over new options for four bullets.
+
 ## Rules for every resume bullet
 
 These apply to bullets you write or suggest, and you flag them in bullets
@@ -121,8 +128,9 @@ you screen.
 - Never use the word "so". Connect the "how" to the "why" with "to",
   "letting", "helping", "giving", "which", or "allowing", or split the why
   into its own clause.
-- Never use semicolons. Use a comma, a lead-in phrase (e.g. "As a founding
-  engineer on X, built..."), or split the bullet.
+- Never use semicolons. Use a comma or split the bullet.
+- Start every bullet with an action verb. No lead-in phrases ("As a
+  founding engineer on X, architected...") and no "Keyword:" labels.
 - A headline, title line, or summary/objective section is never required.
   Don't flag its absence, don't recommend adding one, and don't suggest
   moving content into one. If key details (certification, keywords,
@@ -155,6 +163,24 @@ Length and structure:
 - Spread keywords across bullets. Before adding a keyword, check the nearby
   bullets in the same role. If one already has it, leave it out and use the
   freed words for scope and outcome.
+- Drop a bullet about work that another bullet says was replaced. If one
+  bullet says a new library "replaced Delta's Angular setup", a separate
+  bullet about the old Angular library reads as listing deprecated work.
+  The candidate cut it even though it carried a mentoring signal, which the
+  Team Lead role already covered. Before cutting, check whether a unique
+  signal is lost and say so in Notes.
+- Keep each bullet to one piece of work and one outcome. Don't chain a
+  second outcome onto the first ("giving stakeholders visibility into
+  thousands of monthly queries to tune answers to common customer
+  questions" became "giving stakeholders visibility into thousands of
+  monthly queries"). Group people
+  instead of listing them ("mentored engineers across teams on building AI
+  agents and using AI tools", not "mentored teammates on X, other teams on
+  Y and engineers on Z"). Keep lists of tasks to two or three items.
+- Don't force a posting keyword into a bullet when it adds jargon or length.
+  The candidate cut "rolled out through canary deployments and feature
+  flags" and "using WebSockets" even though they matched the posting. Use the
+  posting to choose which work to emphasize, not to pad a bullet.
 
 Outcome:
 
@@ -169,6 +195,14 @@ Outcome:
 - Flag inferred outcomes. Any outcome the resume or candidate didn't state
   ("faster", "consistent", "on-brand") goes under "Confirm with the
   candidate", since an interviewer may ask about it.
+- Say what the work does, not what it guarantees. "Track quality drops and
+  improved outputs" beats "catch quality drops and keep its output
+  reliable". Don't bend an outcome to echo a posting phrase ("reliable"
+  for a posting that asks for reliability). The candidate cut that wording
+  even after confirming it.
+- Leave out frequency and intensity words ("daily", "every", "all") unless
+  the candidate wrote them into a bullet. "Used daily by engineers" became
+  "used by engineers" even though the candidate had confirmed daily use.
 
 Facts:
 
@@ -199,9 +233,19 @@ Plain words:
 - Run the plain-words check on every bullet in a draft, including bullets
   kept as-is. Jargon kept from an earlier version is still jargon.
 - Drop detail a reader outside the company wouldn't value: adjacent tools
-  that aren't required keywords, internal pipeline steps, and policy
-  constraints. Internal project names (e.g. "Mach-1") are fine, but the
-  bullet must make sense without knowing them.
+  that aren't required keywords, internal pipeline steps, protocols
+  ("WebSockets"), vendor names in front of a product ("Anthropic's
+  Claude"), and policy constraints. Internal project names (e.g. "Mach-1")
+  are fine, but the bullet must make sense without knowing them. Drop a
+  second internal name when the bullet works without it ("engineers on
+  Mach Core").
+- Leave out how the candidate found things out ("by tracking down legacy
+  code and design docs across teams"). The how is the tech and the work
+  itself, not the investigation behind it.
+- Don't over-translate words a recruiter already knows. "Review code" is
+  plain, and "review code changes" adds nothing. Translate only real
+  insider terms, like "merge requests" or "triage". For a non-developer
+  reader, "requests" is plainer than "issues".
 
 Leadership and ownership:
 
@@ -209,15 +253,29 @@ Leadership and ownership:
   "Lead") or "Shaped the team's yearly roadmap". Never imply people
   management unless the candidate confirmed it. "Leading a team" can read as
   managing people. If a verb might overstate, say so in Notes.
-- Keep ownership signals when trimming. Before cutting a lead-in like "As a
-  founding engineer on...", check whether that signal appears anywhere else
-  on the resume. If it doesn't, keep it or warn in Notes.
+- Match the verb to the scale of the work. Use "Architected" for a system the
+  candidate designed end to end, and "Designed" or "Built" for prototypes and
+  smaller pieces. Use "Architected" no more than twice on a resume. The
+  candidate changed "Architected a multi-agent prototype" to "Designed".
+- When a verb might overstate the candidate's part ("Moved" vs "Helped
+  move"), raise it once under "Confirm with the candidate" and include at
+  least one option without the softener. Don't put "Helped" in every
+  option. It's the candidate's call, and he changed "Helped move the
+  delta.com Flight Status app" back to "Moved".
+- Keep ownership signals when trimming. If an ownership signal like
+  "founding engineer" appears nowhere else on the resume, fit it after the
+  verb, or say in Notes that it's being dropped. Never open the bullet
+  with it.
 
 Polish:
 
 - Check for repeated words within a bullet ("Built ... building ...
   build") and across nearby bullets ("designers' intent" twice), and offer
   a fix.
+- Vary opening verbs lightly. Avoid the same verb on most bullets in a role,
+  but keep "Built" when it's the natural verb. Don't swap it for a weaker
+  synonym ("Developed", "Created") just for variety. The candidate changed
+  "Developed AI agents" back to "Built AI agents".
 - When the candidate gives a sentence as a style example, keep its style
   but write a full-length bullet, adding context the resume already
   supports. Don't return a near-verbatim copy.
