@@ -3,12 +3,17 @@
 Get your resume past the recruiter screen, using Claude Code.
 
 The knowledge in this repo comes from two places: what I've learned
-firsthand about hiring and resume reviews, and the advice of
-[Headless Headhunter](https://www.youtube.com/@headlessheadhunter), a
-recruiter who reviews resumes on YouTube & Twitch. Thank you, Headless Headhunter.
+firsthand about hiring and resume reviews, and the advice of Lee Korelitz,
+the Headless Headhunter, a recruiter who reviews resumes on
+[YouTube](https://www.youtube.com/@headlessheadhunter) and
+[Twitch](https://www.twitch.tv/headlessheadhunter)
+Thank you, Lee.
 
-Your reviews shaped how these recruiter agents think, from the 20-second
-scan to plain, outcome-focused bullets.
+The resume format used here, for me and for everyone I help, is his. Read
+his guide, [How to Get a Job](https://www.headlessheadhunter.org/how-to-get-a-job),
+for the format and the reasoning behind it. His reviews shaped how these
+recruiter agents think, from the 20-second scan to plain, outcome-focused
+bullets.
 
 This repo turns Claude Code into a small team of technical recruiters. Give
 it a job posting and your resume, and several recruiter agents screen it the

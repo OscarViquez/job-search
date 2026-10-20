@@ -41,8 +41,9 @@ Each command uses at most 5 recruiters per run.
 
 ## The rules recruiters follow
 
-These come from real screening practice and from corrections made while
-using this repo.
+These come from real screening practice, from Lee Korelitz's
+[How to Get a Job](https://www.headlessheadhunter.org/how-to-get-a-job)
+guide, and from corrections made while using this repo.
 
 | Rule | Why |
 | - | - |

@@ -23,7 +23,10 @@ candidates/jane-doe/resume/resume-v1.md
 ```
 
 The exact formatting doesn't matter. Claude only needs the text: contact
-line, education, and each job with its bullets.
+line, education, and each job with its bullets. The resumes this repo
+builds follow the format from
+[How to Get a Job](https://www.headlessheadhunter.org/how-to-get-a-job),
+the guide by Lee Korelitz, the Headless Headhunter.
 
 **If you don't have one,** or it's out of date, skip to
 [Step 6](#step-6-build-a-resume-for-the-job). `/create-resume` sets up your
